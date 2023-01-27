@@ -7,5 +7,3 @@ def Find_Armstrong(n):
     else:
         return n, 'Not Armstrong Number'
 print(Find_Armstrong(371))
-
-

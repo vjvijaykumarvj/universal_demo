@@ -120,5 +120,3 @@ sample_dict = {
 sample_dict['emp3']['salary'] = 10000
 print(sample_dict)
 '''
-
-#

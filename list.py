@@ -117,3 +117,15 @@ for i in list1:
     if i !=20:
         print(i)
 '''
+'''
+l = [1,2,3,2,4,3]
+def func(l):
+    list = []
+    for i in l:
+        if i not in list:
+            list.append(i)
+    return (list)
+x = func(l)
+for j in x:
+    print(j)
+'''

@@ -129,3 +129,10 @@ x = func(l)
 for j in x:
     print(j)
 '''
+
+# Chech the How Many time repeated in list of items
+'''
+l = [12, 1, 3, 4, 13, 54, 33, 67, 5, 4, 9, 3, 67]
+m = {i for i in l if l.count(i)>1}
+print(m)
+'''

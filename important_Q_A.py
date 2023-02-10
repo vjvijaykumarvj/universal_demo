@@ -36,3 +36,7 @@
 # for value in range(1,1+value):
 #     # print(number ,'*', value, '=', number*value)
 #     print(f'{number} * {value} = {number*value}')
+
+
+# What Is Name Space
+# Ans. The Namespace is a naming system in python used to make sure name are unique to avoid the naming conflicts

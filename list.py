@@ -136,3 +136,19 @@ l = [12, 1, 3, 4, 13, 54, 33, 67, 5, 4, 9, 3, 67]
 m = {i for i in l if l.count(i)>1}
 print(m)
 '''
+
+'''
+#  How can you randomize the items of a list in place in Python?
+import random
+x = ['Keep', 'The', 'Blue', 'Flag', 'Flying', 'High']
+random.shuffle(x)
+print(x)
+'''
+'''
+import random
+x = ['Keep', 'The', 'Blue', 'Flag', 'Flying', 'High']
+for i in x:
+    random.shuffle(x)
+print(x)
+'''
+

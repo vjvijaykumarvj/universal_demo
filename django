@@ -1,0 +1,26 @@
+Here I write the some Django important Commands
+
+1. Command To Install Django:
+        pip install django
+
+2. Command To Check Django Version:
+        python -m django --version
+
+3. Command To Check all the versions of installed modules:
+         pip  freeze
+
+4. Command To Create A Project:
+        django-admin startproject Projectname
+
+5. Command To Create An App:
+        python manage.py startapp Appname
+
+6. install the Mysql in django
+        pip install mysqlclient
+
+7. connect the database using
+        python manage.py makemigrations
+        python manage.py migrate
+
+8. Running the server
+        python manage.py runserver

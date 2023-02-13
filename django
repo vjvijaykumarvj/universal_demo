@@ -22,5 +22,24 @@ Here I write the some Django important Commands
         python manage.py makemigrations
         python manage.py migrate
 
-8. Running the server
+8. To see all migrations, execute the command:
+        python manage.py showmigrations
+8.1  To See the perticular App Migration
+        python manage.py showmigrations Appname
+
+9. Running the server
         python manage.py runserver
+
+10. Command To Create A SuperUser:
+        python manage.py createsuperuser
+        its asking
+        Username : vijay
+        email : vijay@gmail.com
+        password : *********
+        cpassword(again) : **********
+        superuser created successfully.............
+
+11. Command to view a database schema of an existing (or legacy) database:
+        python manage.py inspectdb
+
+12.

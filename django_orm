@@ -1,0 +1,83 @@
+# Model Name Is User
+# If you check the Terminal Using
+   python manage.py shell
+
+1. To see the all the items in queryset
+    user = User.objects.all()
+    print(user)
+
+2. To see the perticular item in queryset
+    user = User.objects.get(id=pk)
+    print(user)
+
+3. Django command filter the item a Model
+    user = User.objects.filter(name='vijay')
+    print(user)
+
+4. To Create the data using
+    user = User.objects.create(name='vijay', age=25)
+    print(user)
+
+5. To delete the perticular data
+    user = User.objects.get(name='vijay').delete()
+    user.save()
+
+6. update the record using
+    user = User.objects.filter(name='vijay').update(name='vijaykumar')
+    user.save()
+
+7. Get the all the data with values
+   user = User.objects.values()
+
+8. Get the perticular record with details
+    user = User.objects.values()[0] get the 0th index value
+
+9. Get the All records in Assending Order
+    user = User.objects.order_by('-name')
+
+10. Get the All records in Desending Order
+    user = USer.objects.order_by('name')
+
+11. Get the data between the records
+    user = User.objects.order_by('_name')[0:3]  here 0 to 2 values will output came
+                    or
+    user = User.objects.all()[0:10]  0 to 9 records output
+
+12. Names Startswith and endswith using queryset
+    user = User.objects.filter(name__startswith = 'v')
+    user = User.objects.filter(address_endswith = 'r')
+
+13. And Operator using ORM
+    user = User.objects.filter(name='vijay') & user.objects.filter(name='ramu')
+                or
+    user = User.objects.filter(name__startswith='anu',name__endswith='s')
+                or
+    user = User.objects.filter(Q(name__startswith = 's') & Q(name__startswith = 'k'))
+
+14. user = User.objects.filter(name__startswith='v') | User.objects.filter(name__startswith='m')
+                or
+    user = User.objects.filter(Q(name__startswith='k') | Q(name__endswith='p'))
+
+15. Count the number of items
+    user = User.objects.count()
+
+16. Exact details return using Exact keyword in ORM
+    user = User.objects.filter(name__exact='pavi')    Output came only pavi
+
+17. Contains its retun the similar condition output
+    user = User.objects.filter(name__contains='v')
+    v letter output all are came
+    output came vijay, vinay, savi, pavi....etc
+
+18. lessthen and gratherthen condition (> and <) (__gte, __lte)
+18.1    Get the age lessthen using ORM
+        user = User.objects.filter(age__gte=30) Gratherthen condition
+        user = User.objects.filter(salary__lte=25000) lessthen condition
+
+19. To Create the all details onese using Bulk Condition
+    user = User.objects.bulk_create([User(name='savitri',age=54),User(name='pavan',age=29),User(name='ramya',age=21))]
+    user.save()
+
+20 Aggregate and Annotate
+   Aggregate used for Calculate the entire Queryset
+   Annotate will Calculate the perticular value in queryset

@@ -1,4 +1,24 @@
 ''' List Interview Coding Q&A'''
+# what is List
+'''
+1. The list is data type in python 
+2. List a mutable objects
+3. Indexing slicing is support using list
+4. Insertion order is preserved modification is done
+5. List is not hashable.
+6. List is represented using []
+7. Homogeneous & Heterogeneous objects are allowed which means Lists need not be homogeneous always,
+    a single list may contain data types like Integers, Strings, as well as Objects
+8. List allows duplicate objects. 
+'''
+
+
+'''# Find the type and size of list
+l = []
+print(type(l))
+print(l.__sizeof__())
+'''
+
 # 1.Reverse a list in Python
 '''
 list1 = [100, 200, 300, 400, 500]

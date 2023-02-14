@@ -1,0 +1,294 @@
+1. What Is OOPS in Python
+
+In Python, object-oriented Programming (OOPs) is a programming paradigm
+That uses objects and classes in programming.
+It aims to implement real-world entities like inheritance, polymorphisms, encapsulation, etc. in the programming.
+#################################################################################################################################################
+
+2. What is Class
+
+The Class Is Blueprint of objects
+        (or)
+The Calss Is a Prototype of Objects
+Its a Logical entity its has special attributes and methods
+
+We create class Using Class Keyword
+
+Class Employee:
+    pass
+
+#######################################################################################################################################
+3. What Is Objects
+
+The objects is a Instance of Class
+        or
+The objects is an entity its has some state and behavior
+it may be real world like mouse,keyboard,laptop,book, pen....etc
+
+Here Iam creating the calss name mycalss to create object
+
+class Myclass:
+    x = 5
+obj = Myclass()
+print(obj.x)
+
+
+class Myclass:
+    def config(self):
+        print('my Name is vijay')
+        print('my Age is 20')
+        print('my Address is Bangalore')
+obj = Myclass()
+obj.config()
+######################################################################################################################################
+
+4. What is pass
+
+If we dont have write and code inside the function or class so we put the pass statement to avoid th errors
+
+class Myclass:
+    pass
+obj = Myclass()
+###################################################################################################################################
+
+5. What is Self
+* The self is the refarence variable, its represent the current objects
+* The self is the first argument when we create the instance or constructor
+* The self is always inside of the class
+* The self is not a keyword
+* We cant't use self outside class
+* Accesing the instance variable data with the class
+* declearing the instance variable
+################################################################################################################################
+
+6. What is Constructor(__init__)
+* Constructor is the special method in python
+* The name of constructor should always __init__(self)
+* When we create the object constructor will called automatically
+* for each objects constructor created automatically
+* Constructor is an optional python provide the default constructor __init__(self)
+* Constructor used for creating and initializing the instance variable
+#################################################################################################################################
+
+
+7. What is Super keyword
+* Python also have the super() function thet will the child inherit all the methos and properties from the parent class By using instance name and constructor
+
+class Parent:
+    def __init__(self, name):
+        self.name = name
+    def parent_info(self):
+        print(f"My name is {self.name}")
+class Child(Parent):
+    def __init__(self,name,age):
+        self.age=age
+        super().__init__(name)
+    def child_info(self):
+        print(f'my age is {self.age}')
+        super().parent_info()
+obj = Child('vijay',25)
+obj.child_info()
+#############################################################################################################################
+
+8. The Mian Concept of OOPS are:
+* Inheritance
+* Encapsulation
+* Polymorphism
+* Abstraction
+* Class
+* Object
+
+
+
+9. What Is Inheritance
+* The inheritnce is Parent Child RelationShip
+* Parent (Base) and Child (Derived)
+* The inheritance Allows to a class that inherit the all the methods and properties from another class
+* Its provide the reusable code
+
+# Its can 5 types
+* Single Inheritance
+* Multiple Inheritance
+* Multilevel Inheritance
+* Hirachical Inheritance
+* Hybride Inheritance
+
+############### Single Inheritance ######################
+* Its has the Single Base And Single Derived Class
+* The parent give the all the properties nd methods child can be taken
+
+class Parent:
+    def fun1(self):
+        print('Parent Called')
+class Child(Parent):
+    def fun2(self):
+        print('Child Called')
+        super().fun1()
+obj = Child()
+obj.fun2()
+###############################################################################################################################
+
+
+
+#################### Mutilevel Inheritance ########################
+* The Multilevel inheritance is achived when a derived class inherit the another derived class is no number of levels up to
+
+class GrandParent:
+    def grand_parent_info(self):
+        print('Grand_Parent Called')
+class Parent(GrandParent):
+    def parent_info(self):
+        print('Parent Called')
+        super().grand_parent_info()
+class Child(Parent):
+    def child_info(self):
+        print('Child Called')
+        super().parent_info()
+obj = Child()
+obj.child_info()
+
+
+Exm of Multilevel Inheritance is: Family like Grand, Father, Child, GrandChild.........etc
+#####################################################################################################################################
+
+# Multiple Inheritance
+* When class is derived to multiple base class
+
+class Father:
+    def father_info(self):
+        print('Father Called')
+class Mother():
+    def mother_info(self):
+        print('Mother called')
+class Child(Father,Mother):
+    def child_info(self):
+        print('Child Called')
+        super().father_info()
+        super().mother_info()
+obj = Child()
+obj.child_info()
+
+Exm of Multiple Inheritance: you have inherit your eys from father and nose like your mother
+
+##################################################################################################################################
+
+# Hirachical Inheritance:
+The Single Base class Connect to Multiple Derived Class
+
+class Car:
+    def car_info(self):
+        print('car can called')
+class Maruthi(Car):
+    def maruthi_info(self):
+        print('Maruthi Called')
+        super().car_info()
+class Innova(Car):
+    def innova_info(self):
+        print('Innova Called')
+        super().car_info()
+obj = Innova()
+obj.innova_info()
+obj1 = Maruthi()
+obj1.maruthi_info()
+
+Exm of Hirachical Ingeritance is Car is the common class Audi,Innova,maruthi..........etc
+####################################################################################################################################
+
+
+10. What Is Encapsulation:
+* The Encapsulation is the process of to binding the data and function within single unit
+* The wripping of data means the combination of the variable and method within single unit
+* Its the restrict the scope of the variable and method in particular calss
+scope : public, protect, private
+
+* Public: The variable can decleard the any ware of the function inside usng global keyword used
+* protect: If any class variable is declared followed by a single underscore(_) it means that the variable is a protected variable
+* private: If any class variable is declared followed by a double underscore(__) it means that the variable is a private variable
+
+class Car:
+    def Maruthi(self):
+        print('Maruthi Called')
+    def _Innova(self):
+        print('Innova Called')
+    def __Mahindra(self):
+        print('Mahindra called')
+obj = Car()
+obj.Maruthi()
+obj._Innova()
+obj._Car__Mahindra()
+
+
+Exm: Encapsulation Examples are Capsule, and School Bag contains to Pen,Book,Pencil..........etc
+
+####################################################################################################################################
+
+
+11. What is Polymorphism:
+* The literal meaning of polymorphism is the condition of occurrence in different forms. Polymorphism is a very important concept in programming.
+* It refers to the use of a single type entity (method, operator or object) to represent different types in different scenarios.
+
+# Method OverLoading
+# Method OverRiding
+
+# Method OverLoading:
+Two are more method are same name with different parametres in same class is called Method OverLoading
+
+class Employee:
+    def sum(self,a):
+        return a
+    def sum(self,a,b):
+        return a+b
+obj = Employee()
+print(obj.sum(1,2))
+
+
+# Method Overriding:
+Using different class same method and same properties its called Method OverRiding
+
+class Andhrapradesh:
+    def capital(self):
+        print('Andhrapradesh capital is Amaravathi')
+    def language(self):
+        print('Andhrapradesh language is Telugu')
+class Tamilnadu():
+    def capital(self):
+        print('Tamilnadu capital is Chennai')
+    def language(self):
+        print('Tamilnadu language is Tamil')
+obj = Tamilnadu()
+obj1 = Andhrapradesh()
+for i in obj,obj1:
+    i.capital()
+    i.language()
+
+Exm of Polymorphism is Any Person he has office like employee home like husband..........etc
+
+#######################################################################################################################################3
+
+12. What is Abstraction
+
+* The Abstraction is the process of data hiding the unnessary data from user
+* Hiding the internal implemetation details
+* Abstraction meand only declaration but not implemantation
+here use the abstractmethod and Abstractmethod
+
+from abc import ABC, abstractmethod
+class Vehical(ABC):
+    @abstractmethod
+    def getwheels(self):
+        pass
+class Bus(Vehical):
+    def getwheels(self):
+        print('Bus has 10 Wheels')
+class Lorry(Vehical):
+    def getwheels(self):
+        print('Lorry has 20 Wheels')
+obj = Lorry()
+obj.getwheels()
+obj1 = Bus()
+obj1.getwheels()
+
+
+Exm of Abstraction is Washing machine external parts working wekonw but internally what working we don't know
+
+################################################################################################################################

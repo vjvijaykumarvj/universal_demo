@@ -41,5 +41,3 @@ Here I write the some Django important Commands
 
 11. Command to view a database schema of an existing (or legacy) database:
         python manage.py inspectdb
-
-12.

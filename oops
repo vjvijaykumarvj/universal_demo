@@ -292,3 +292,15 @@ obj1.getwheels()
 Exm of Abstraction is Washing machine external parts working wekonw but internally what working we don't know
 
 ################################################################################################################################
+
+13. What is Instance Variable:
+* If the value of the variable changing object to object and instance to instance is  called as Instance Variable
+* Every object seperate copy of the instance variable can created
+* most of the time isntance variable can created inside the constructor by using self  __init__(self)
+* inside the constructor and inside the instance method create by using refarence varaible
+* outside of the class also created instance variable by using object referance variable
+
+14. What is Static or Class valel variable:
+* if the value of the variable can't be change object to object instance to instance its called a statis(or) calss level variable
+* One copy of the static variable can created all objects
+* Most of the time clas level variaable created inside class only

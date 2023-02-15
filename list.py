@@ -171,4 +171,3 @@ for i in x:
     random.shuffle(x)
 print(x)
 '''
-

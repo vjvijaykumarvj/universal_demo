@@ -1,0 +1,161 @@
+                    Functions
+
+*  A function is a block of code which only runs when it is called.
+
+*  You can pass data, known as parameters, into a function.
+
+*  A function can return data as a result.
+
+* We create the function using (def) keyword
+* onese write the def keyword after we write the function name inside parenties we pass the arguments
+* you call the function using function name with () parenthesis.
+
+###### The syntax of function:
+
+def func():
+    print('Here Iam writing Function')
+func()
+#################################################################################################################################
+
+#  Arguments:
+
+* Information can be passed into functions as arguments.
+* Arguments are passed after the function name and inside the parenthesis
+  as many arguments as you want, just separate them with a comma.
+
+exm:
+def func(fname):
+    print(f'my name is {fname}')
+func('vijay')
+func('sai')
+func('dasu')
+
+##################################################################################################################################3
+### Parameter and Arguments:
+
+A parameter is the variable listed inside the parentheses in the function definition.
+
+An argument is the value that is sent to the function when it is called.
+################################################################################################################################
+
+# What is Return
+* The return keyword used to exit a function and return the value
+* Any statements after return are not executed.
+* NOTE: Return statement can not be used outside the function.
+
+def func():
+    return 'Hello welcome python'
+print(func())
+
+def ical(x, y):
+    sum = x + y
+    sub = x - y
+    div = x / y
+    mul = x * y
+    return sum, sub, div, mul
+sum,sub,div,mul = (ical(10, 20))
+print('sum',sum)
+print('sub',sub)
+print('mul',mul)
+print('div',div)
+####################################################################################################################################
+
+# Types of Arguments
+
+* Position Argument
+* Keyword Argument
+* Default Argumet
+* Variable length Argument(*args)
+* Variable length keyword Argument(**kwargs)
+
+###############################################################################################################################
+1. Position Argument:
+* Here the number of Arguments and Postions must be matched
+* if the postion is not match output is change
+* Positional arguments are arguments that can be called by their position in the function definition.
+
+exm 1: Here arguments and postions are matched code excucte correct way
+
+def employee(name,age,salary):
+    print(f'my Name is {name}')
+    print(f'my Age is {age}')
+    print(f'my Salary is {salary}')
+employee('pallavi', 24, 43000)
+o/p =  my Name is pallavi
+       my Age is 24
+       my Salary is 43000
+
+
+exm 2: Here argumets and match but postion change output also change
+
+def employee(name,ge,salary):
+    print(f'my Name is {name}')
+    print(f'my Age is {age}')
+    print(f'my Salary is {salary}')
+employee(23, 43000,'pallavi')
+
+o/p =   my Name is 23
+        my Age is 4000
+        my Salary is pallavi
+
+########################################################################################################################
+2. Keywords Arguments:
+* Keyword arguments are argumets that can call their names
+* Here postion is not important but arguments are match
+* Keyword arguments are passed using parameter names to avoid the confusion created by positional arguments
+
+exm:
+def employee(name,age,salary):
+    print(f'my Name is {name}')
+    print(f'my Age is {age}')
+    print(f'my Salary is {salary}')
+employee(name='vijay', salary=43000,age=20)
+
+##################################################################################################################################
+3. Default Arguments:
+* Arguments passed without name is called Default Arguments
+* After default Arguments we cant pass postion arguments its leads to error
+
+exm : Here arguments and values are match and default arguments we passed after postion arguments its fine
+def employee(name,age,salary=34000):
+    print(f'my name is {name}')
+    print(f'my Age is {age}')
+    print(f'my Salary is {salary}')
+employee('ramu',23,25000)
+
+exm:2 we pass after default values we pass position arguments so leads to error
+
+def employee(name='pavi',age):
+    print(f'my Name is {name}')
+    print(f'my Age is {age}')
+employee('vijay',23)
+
+error: SyntaxError: non-default argument follows default argument
+#############################################################################################################################
+
+4. Variable length Arguments:
+* we don't how many arguments are passing inside the function so we put just *args its taken the total action its called Variable length arguments
+* its output came tuple expression ()
+* inside the parenteses we pass the *args
+* we can pass any argument after *args its leads to error
+
+def Employee(*course):
+    for i in course:
+        print(i)
+Employee('python','java','AI','ML','MySql')
+##################################################################################################################################
+
+5. Variable length keywords Arguments:
+* we don't how many arguments are passing inside the function so we put just **kwargs its taken the total action its called Variable length keywords arguments
+* the output will cane dict format { }
+* we can't pass any arguments after **kwargs its leads to error
+
+def employee(**kwargs):
+    for i,j in kwargs.items():
+        print(i,'----',j)
+employee(course='python', institute='JNTUA', address='AP')
+
+##########################################################################################################################
+
+The order of the function arguments is
+def fun(postion,keywords,default,*args,**kwargs):

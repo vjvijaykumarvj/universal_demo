@@ -58,3 +58,9 @@ print(x.write('this is appending operation'))                    #Already existi
 
 5. with open('file.txt','a') as p:
     print(p.write('Hello welcome Python language'))
+
+
+
+7. How to remove the file
+import os
+os.remove('file.txt')

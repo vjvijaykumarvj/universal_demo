@@ -8,6 +8,7 @@
 5. The open function makes the 2 parametres
         1. filename  2. mode
 6. There are four different methods (modes) for opening a file:
+7. After end time we close the file
 
 
 "r" - Read - Default value. Opens a file for reading, error if the file does not exist
@@ -23,42 +24,46 @@ x = open('filename.txt','w')
 print(x.write('Hello Here Iam Creating FileHandling'))          #file is create using write operation
 print(x.writelines())
 print(x.writable())
-
+x.close()
 
 x = open('filename.txt','r')
 print(x.read())                                                 # read the data in files
 print(x.readable())
 print(x.readline())
-
+x.close()
 
 
 x = open('filename.txt','a')
 print(x.write('this is appending operation'))                    #Already existing data and new data add using apending operation
-
+x.close()
 
 1. with open('file.txt','r') as p:
     print(p.read())
+    p.close()
 
 1.1 with open("file.txt", "r") as file:
         data = file.readlines()
         for line in data:
             word = line.split()
             print (word)
+            file.close()
 
 2. with open('file.txt','r') as p:
     print(p.readlines())
+    p.close()
 
 3. with open('file.txt','r') as p:
     print(p.readable())
-
+    p.close()
 
 4. with open('file.txt','w') as p:
     print(p.write('Hello welcome Python language'))
     print(p.writelines('python is interpreter language'))
+    p.close()
 
 5. with open('file.txt','a') as p:
     print(p.write('Hello welcome Python language'))
-
+    p.close()
 
 
 7. How to remove the file

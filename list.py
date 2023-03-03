@@ -171,3 +171,13 @@ for i in x:
     random.shuffle(x)
 print(x)
 '''
+
+# What IS Zip Function
+# The Zip function is mapping the 2 or more sequences(list,tuple...etc) into a single iterable object.
+'''
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+list3 = [12.2, 13.2, 14.2]
+zipped = zip(list1,list2,list3)
+print(list(zipped))
+'''

@@ -1,5 +1,7 @@
 ''' List Interview Coding Q&A'''
 # what is List
+from collections import Counter
+
 '''
 1. The list is data type in python 
 2. List a mutable objects
@@ -180,4 +182,24 @@ list2 = ['a', 'b', 'c']
 list3 = [12.2, 13.2, 14.2]
 zipped = zip(list1,list2,list3)
 print(list(zipped))
+'''
+
+'''
+# Print the Unique and Duplicate values uisng List
+l = [1,2,4,5,6,3,3,1,5,6]
+unique = []
+duplicate = []
+for i in l:
+    if i not in unique:
+        unique.append(i)
+
+    elif i not in duplicate:
+        duplicate.append(i)
+print(f'unique values ', unique)
+print(f'duplicate values ',duplicate)
+################## or ############################
+m = list(Counter([i for i in l if l.count(i)>1]))
+s = list(set([i for i in l if l.count(i)>1]))
+print(f'Duplicate values using list comprehension',m)
+print(f'Duplicate values using Counter Method',s)
 '''

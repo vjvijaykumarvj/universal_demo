@@ -40,3 +40,14 @@
 
 # What Is Name Space
 # Ans. The Namespace is a naming system in python used to make sure name are unique to avoid the naming conflicts
+'''
+# Anagram Find Using Python:
+from collections import Counter
+def anagram(s,s1):
+    return Counter(s) == Counter(s1)
+    # or
+    # return sorted(s) == sorted(s1)
+    # or
+    # return set(s) == set(s1)
+print(anagram('evil','live'))
+'''

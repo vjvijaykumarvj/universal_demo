@@ -203,3 +203,11 @@ s = list(set([i for i in l if l.count(i)>1]))
 print(f'Duplicate values using list comprehension',m)
 print(f'Duplicate values using Counter Method',s)
 '''
+
+'''
+# using sorting opertaion asending to desending order
+m = [('rishav', 10), ('akash', 5), ('ram', 20), ('gaurav', 15)] # input value
+n = [('akash', 5), ('rishav', 10), ('gaurav', 15), ('ram', 20)] # output value
+x = tuple(sorted(m,key=lambda x:x[1]))
+print(x)
+'''

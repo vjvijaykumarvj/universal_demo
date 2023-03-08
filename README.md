@@ -1,1 +1,1 @@
-# Here I write the some important python interview questions and answers.
+# Here I write the some important Python interview questions and answers.

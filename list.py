@@ -211,3 +211,20 @@ n = [('akash', 5), ('rishav', 10), ('gaurav', 15), ('ram', 20)] # output value
 x = tuple(sorted(m,key=lambda x:x[1]))
 print(x)
 '''
+
+'''
+# Print the how many time the series repeated in using python
+
+s = 'abcefghiklmn123987812'
+size = 0
+i = 0
+while i < len(s)-1:
+    if i < len(s)-1 and ord(s[i])+1 == ord(s[i+1]):
+        j = i+1
+        size += 1
+        while j < len(s)-1 and ord(s[j])+1 == ord(s[j+1]):
+            i = j
+            j += 1
+    i += 1
+print(size)
+'''

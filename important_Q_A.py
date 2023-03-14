@@ -59,11 +59,17 @@ print(anagram('evil','live'))
 
 
 # Given Input i want to print the price is gretherthen 100 that only print half values
-'''
+
 input_details =  [{"name": "HDD","price": "$166" ,"brand": "Samsung", },
             {"name": "Monitor", "price": "$130","brand": "Dell",},
             {"name": "Mouse", "price": "$45","brand": "Logitech",}]
 
+''' OP = [
+    {'name': 'HDD', 'price': '83', 'brand': 'Samsung'}, 
+    {'name': 'Monitor', 'price': '65', 'brand': 'Dell'},
+    {'name': 'Mouse', 'price': '$45', 'brand': 'Logitech'}
+]'''
+'''
 for i in input_details:
     if int(i['price'][1:])>100:
         i['price'] = str(int(i['price'][1:])//2)
